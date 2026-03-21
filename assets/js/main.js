@@ -25,7 +25,7 @@ document.addEventListener('click', e => {
 const cursorEl = document.getElementById('cursor');
 const ringEl   = document.getElementById('cursorRing');
 if (window.matchMedia('(hover: hover)').matches) {
-  let mx=-100, my=-100, rx=-100, ry=-100;
+  let mx=-999, my=-999, rx=-999, ry=-999;
   document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
   (function animC() {
     cursorEl.style.transform = `translate(${mx-5}px,${my-5}px)`;
@@ -73,7 +73,8 @@ if (window.matchMedia('(hover: hover)').matches) {
   let t = 0;
   function draw() {
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#05050f';
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    ctx.fillStyle = isDark ? '#05050f' : '#faf9f7';
     ctx.fillRect(0, 0, W, H);
 
     orbs.forEach(o => {
