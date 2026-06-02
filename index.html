@@ -1,321 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="ES Sriram — B.Tech CSE Cloud Computing student at Alliance University. C Developer, Cloud learner, open to internships 2025.">
-  <meta name="keywords" content="ES Sriram, portfolio, C developer, cloud computing, Alliance University, internship">
-  <meta property="og:title" content="ES Sriram — Portfolio">
-  <meta property="og:description" content="CS undergrad building real software with C, Python and cloud tools.">
-  <title>Sriram — Portfolio</title>
+  <meta name="description" content="Sriram — CloudOps Lead & Full-Stack Cloud Engineer specializing in scalable infrastructure and AI-focused development.">
+  <meta name="keywords" content="Sriram, portfolio, CloudOps, Cloud Computing, Full-Stack, React, Node.js, Alliance University, Alliance One Shastra">
+  
+  <!-- Open Graph / Premium Preview -->
+  <meta property="og:title" content="Sriram — Cloud & Full-Stack Engineer">
+  <meta property="og:description" content="Co-Lead of CloudOps. Engineering high-performance web systems and automated cloud architecture.">
+  <meta property="og:type" content="website">
+  
+  <title>Sriram — Cloud & Full-Stack Engineer</title>
+  
+  <!-- Typography Hierarchy: Premium Geometric & Mono Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
+  <!-- Premium Interactive Elements -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-glow" id="customCursorGlow"></div>
+  <div class="ambient-glow" id="ambientGlow"></div>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-logo">Sriram.dev</div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-      <button class="theme-toggle" id="themeToggle" title="Toggle theme"></button>
+  <!-- NAVIGATION (Premium Fixed Glass Blur) -->
+  <nav id="navbar" class="glass-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>sriram<span class="logo-dot">.</span>dev<span class="logo-bracket">&gt;</span>
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item"><span class="nav-num">01.</span> About</a>
+        <a href="#skills" class="nav-item"><span class="nav-num">02.</span> Stack</a>
+        <a href="#projects" class="nav-item"><span class="nav-num">03.</span> Selected Work</a>
+        <a href="#exposure" class="nav-item"><span class="nav-num">04.</span> Experience</a>
+        <a href="#contact" class="btn-nav">Get In Touch</a>
+      </div>
+
+      <button class="hamburger-menu" id="hamburger" aria-label="Toggle Navigation">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"><canvas id="bgCanvas"></canvas></div>
-    <div class="hero-content">
-      <h1 class="hero-name"><span class="es-dim">ES </span><span class="accent-word">Sriram.</span></h1>
-      <div class="hero-divider"></div>
-      <div class="hero-roles">C Developer <span>·</span> Cloud Computing <span>·</span> CS Engineer</div>
-      <p class="hero-desc">CS undergrad at Alliance University building real software with C, Python, and cloud tools.
-        Focused on clean logic, persistent data, and shipping things that actually work.</p>
-      <div class="hero-cta">
-        <a class="btn-primary" href="#projects">View Projects →</a>
-        <a class="btn-secondary" href="#contact">Let's Connect</a>
+  <!-- HERO SECTION (Interactive Canvas + Depth Fields) -->
+  <section id="hero" class="interactive-hero">
+    <div class="grid-overlay"></div>
+    <canvas id="bgCanvas"></canvas>
+    
+    <div class="hero-container">
+      <div class="hero-badge-wrapper">
+        <span class="hero-status-badge">
+          <span class="pulse-dot"></span> Open to Roles & Internships
+        </span>
       </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">3<span>+</span></div>
-          <div class="stat-label">Projects</div>
+      
+      <h1 class="hero-title animate-text">
+        Building Scalable <br>
+        <span class="text-gradient">Cloud Architecture</span> & Web Systems
+      </h1>
+      
+      <p class="hero-subtitle">
+        Second-Year Computer Science Student & <strong>Co-Lead of CloudOps</strong>. Focusing on production-grade systems, automated infrastructure, and full-stack engineering with clean execution.
+      </p>
+      
+      <div class="hero-actions">
+        <a class="btn-premium-primary" href="#projects">
+          Explore Projects 
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33334 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn-premium-secondary" href="#contact">Read Documentations</a>
+      </div>
+      
+      <!-- Linear-style Counter Stats -->
+      <div class="hero-metrics-panel glass-card">
+        <div class="metric-block">
+          <div class="metric-val">CloudOps</div>
+          <div class="metric-lbl">Leadership Position</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">4<span>+</span></div>
-          <div class="stat-label">Languages</div>
+        <div class="metric-divider"></div>
+        <div class="metric-block">
+          <div class="metric-val">MERN + Cloud</div>
+          <div class="metric-lbl">Core Stack focus</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">2024</div>
-          <div class="stat-label">Batch</div>
+        <div class="metric-divider"></div>
+        <div class="metric-block">
+          <div class="metric-val">2024–28</div>
+          <div class="metric-lbl">B.Tech Timeline</div>
         </div>
       </div>
     </div>
-    <div class="scroll-hint">
-      <div class="scroll-line"></div>scroll
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="reveal">
-      <div class="section-label">// about me</div>
-      <h2 class="section-title">Who I Am</h2>
-      <p class="section-subtitle">An early-stage engineer committed to building and learning through real-world projects.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-avatar">
-          <span class="avatar-placeholder">ES</span>
-          <div class="avatar-ring"></div>
-          <div class="avatar-ring2"></div>
-        </div>
-        <div class="about-badge">📍 Bangalore, India<br><span>CSE — Cloud Computing</span></div>
-      </div>
-      <div class="about-text reveal">
-        <p>I'm <strong>ES Sriram,</strong> a B.Tech student specializing in <strong>Computer Science (Cloud Computing)</strong> at <strong>Alliance University, Bangalore (2024–2028).</strong> I focus on <strong>building practical, real-world projects</strong> with an emphasis on <strong>strong fundamentals and system-level understanding.</strong></p>
-        <p>I primarily work with <strong>C</strong>, and have experience with <strong>Python, C++, and Java.</strong> I’m particularly interested in how systems work under the hood — including memory, data structures, file systems, and databases.</p>
-        <p>I’m currently expanding my skills in cloud technologies, actively learning <strong> Microsoft Azure and AWS</strong> to build and deploy <strong>scalable applications.</strong></p>
-        <div class="about-tags">
-          <span class="tag">C / Systems</span>
-          <span class="tag">Azure cloud</span>
-          <span class="tag">AWS</span>
-          <span class="tag">SQL & SQLite</span>
-          <span class="tag">Linux / WSL</span>
-          <span class="tag">Problem solver</span>
-          <span class="tag">Fast learner</span>
-        </div>
-      </div>
+    
+    <div class="scroll-indicator">
+      <span class="scroll-text">SCROLL TO EXPLORE</span>
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="reveal">
-      <div class="section-label">// expertise</div>
-      <h2 class="section-title">Skills & Stack</h2>
-      <p class="section-subtitle">What I know, how I use it, and what I'm building toward.</p>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-name">C Programming</div>
-        <div class="skill-desc">Primary language — memory management, file handling, data structures, CRUD apps</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">78%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="78" style="width:0"></div>
-        </div>
+  <!-- ABOUT SECTION (Asymmetric Layout & Clean Typography) -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-index">01 // IDENTITY</span>
+        <h2 class="section-main-title">The Engineering Approach</h2>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🐍</div>
-        <div class="skill-name">Python</div>
-        <div class="skill-desc">Lists, dicts, function-based design, console apps, basic problem solving</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">60%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="60" style="width:0"></div>
+      
+      <div class="about-split-grid">
+        <div class="about-narrative">
+          <p class="lead-text">
+            I specialize in the crossover between architecture design and scalable web applications. As a computer science student at Alliance University, I look at software through the lens of performance, containerization, and continuous delivery.
+          </p>
+          <p>
+            My experience driving site stability and deployment pipelines as the <strong>Co-Lead of CloudOps</strong> for major technical events has given me practical insights into live system management and cross-team execution.
+          </p>
+          <p>
+            Currently developing full-stack applications with React, Node.js, and MongoDB while designing infrastructure architectures across AWS and Azure cloud platforms.
+          </p>
         </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔷</div>
-        <div class="skill-name">C++ / OOP</div>
-        <div class="skill-desc">Classes, objects, inheritance, polymorphism — foundational OOP concepts</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">50%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="50" style="width:0"></div>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🗄️</div>
-        <div class="skill-name">SQL & Databases</div>
-        <div class="skill-desc">SQL basics, SQLite embedded DB, CRUD operations, data storage design</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">62%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="62" style="width:0"></div>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">☁️</div>
-        <div class="skill-name">Microsoft Azure</div>
-        <div class="skill-desc">Virtual Machines, Azure SQL, Resource Groups — cloud fundamentals</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">45%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="45" style="width:0"></div>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">☁️</div>
-        <div class="skill-name">AWS</div>
-        <div class="skill-desc">EC2, S3, IAM, RDS — cloud infrastructure & deployment fundamentals</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">40%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="40" style="width:0"></div>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🐧</div>
-        <div class="skill-name">Linux / Tools</div>
-        <div class="skill-desc">WSL environment, GCC compiler, Git, command-line debugging workflow</div>
-        <div class="skill-level"><span class="skill-label">Proficiency</span><span class="skill-pct">55%</span></div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar" data-width="55" style="width:0"></div>
+        
+        <div class="about-card-display">
+          <div class="profile-card glass-card">
+            <div class="card-glow-effect"></div>
+            <div class="terminal-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">location_matrix.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="token-keyword">const</span> engineer = {</p>
+              <p class="p-indent"><span class="token-key">name</span>: <span class="token-string">"Sriram"</span>,</p>
+              <p class="p-indent"><span class="token-key">role</span>: <span class="token-string">"CloudOps Co-Lead"</span>,</p>
+              <p class="p-indent"><span class="token-key">base</span>: <span class="token-string">"Bangalore, IN"</span>,</p>
+              <p class="p-indent"><span class="token-key">focus</span>: [<span class="token-string">"CloudOps"</span>, <span class="token-string">"Full-Stack"</span>, <span class="token-string">"AI Development"</span>]</p>
+              <p>};</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="reveal">
-      <div class="section-label">// selected work</div>
-      <h2 class="section-title">Projects</h2>
-      <p class="section-subtitle">Things I've built — real problems, real code.</p>
-    </div>
-    <div class="projects-grid">
+  <!-- SKILLS SECTION (Bento Grid Architecture) -->
+  <section id="skills" class="section-padding bento-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-index">02 // CAPABILITIES</span>
+        <h2 class="section-main-title">Technical Ecosystem</h2>
+      </div>
+      
+      <!-- Premium Bento Grid Layout -->
+      <div class="bento-grid">
+        
+        <div class="bento-item glass-card large-span">
+          <div class="bento-inner">
+            <div class="tech-icon-row">
+              <span class="tech-badge-pill">React</span>
+              <span class="tech-badge-pill">Tailwind CSS</span>
+              <span class="tech-badge-pill">Node.js</span>
+              <span class="tech-badge-pill">Express</span>
+              <span class="tech-badge-pill">Mongoose</span>
+            </div>
+            <h3>Full-Stack Application Delivery</h3>
+            <p>Building cohesive user interfaces married with secure, scalable RESTful APIs. Emphasizing state management, modern component design patterns, and efficient schema definitions.</p>
+          </div>
+        </div>
 
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a0533,#2d1065,#0f1a3d)"></div>
-          <div class="project-num">01</div>
-          <span class="project-tag-top purple">C / SQL</span>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Student Information System</div>
-          <div class="project-desc">Menu-driven C application to manage student records with persistent storage. Uses
-            SQLite for CRUD operations. Built and tested in Linux WSL with GCC.</div>
-          <div class="project-tech">
-            <span class="tech-pill">C</span>
-            <span class="tech-pill">SQLite</span>
-            <span class="tech-pill">SQL</span>
-            <span class="tech-pill">Linux / GCC</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link featured"
-              href="https://github.com/Sri-Ram-git/Scalable-Student-Information-System-C-SQL-" target="_blank">GitHub
-              →</a>
-            <a class="project-link" href="YOUR_DEMO_LINK_HERE" target="_blank">Demo</a>
+        <div class="bento-item glass-card medium-span">
+          <div class="bento-inner">
+            <div class="icon-cube">☁️</div>
+            <h3>Cloud Ops & Infrastructure</h3>
+            <p>Managing systems deployment pipelines, computing runtimes, and storage networks across Amazon Web Services and Microsoft Azure environments.</p>
           </div>
         </div>
-      </div>
 
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#001a1f,#003d33,#001433)"></div>
-          <div class="project-num">02</div>
-          <span class="project-tag-top cyan">C / Systems</span>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Parking Management System</div>
-          <div class="project-desc">Menu-driven parking system in C using structures and arrays to store vehicle
-            details. Applied modular programming and basic memory handling.</div>
-          <div class="project-tech">
-            <span class="tech-pill">C</span>
-            <span class="tech-pill">Structs & Arrays</span>
-            <span class="tech-pill">Modular Design</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link featured" href="https://github.com/Sri-Ram-git/parking-management-system-c"
-              target="_blank">GitHub →</a>
-            <a class="project-link" href="YOUR_DEMO_LINK_HERE" target="_blank">Demo</a>
+        <div class="bento-item glass-card small-span">
+          <div class="bento-inner">
+            <div class="mono-code">gcc -o main</div>
+            <h3>System Level C/C++</h3>
+            <p>Strong baseline in fundamental computing logic, memory safety configurations, and data structures.</p>
           </div>
         </div>
-      </div>
 
-      <div class="project-card reveal">
-        <div class="project-thumb">
-          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f0010,#400030,#1a0f00)"></div>
-          <div class="project-num">03</div>
-          <span class="project-tag-top pink">Python</span>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Student Record Manager</div>
-          <div class="project-desc">Console-based Python program to manage student records using lists and dictionaries.
-            Function-based design with clean data management logic.</div>
-          <div class="project-tech">
-            <span class="tech-pill">Python</span>
-            <span class="tech-pill">Lists & Dicts</span>
-            <span class="tech-pill">Functions</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link featured"
-              href="https://github.com/Sri-Ram-git/Student-Record-Management-System-Python-" target="_blank">GitHub
-              →</a>
-            <a class="project-link" href="YOUR_DEMO_LINK_HERE" target="_blank">Demo</a>
+        <div class="bento-item glass-card small-span">
+          <div class="bento-inner">
+            <div class="icon-cube">🗄️</div>
+            <h3>Data Management</h3>
+            <p>SQL relational databases, document storage models, and embedded systems handling structured queries.</p>
           </div>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- EXPOSURE -->
-  <section id="exposure">
-    <div class="reveal">
-      <div class="section-label">// hands-on experience</div>
-      <h2 class="section-title">Technical Exposure</h2>
-      <p class="section-subtitle">Real environments, real workflows.</p>
-    </div>
-    <div class="exposure-list">
-      <div class="exposure-item reveal">
-        <div class="exp-dot"></div>
-        <div class="exp-text">Hands-on experience working in a <strong>Linux (WSL) environment</strong> for compiling
-          and running C programs using GCC — build, test, debug cycle.</div>
-      </div>
-      <div class="exposure-item reveal">
-        <div class="exp-dot"></div>
-        <div class="exp-text">Experience using <strong>SQL-based data storage</strong> in small-scale applications —
-          embedded SQLite, schema design, CRUD queries from C.</div>
-      </div>
-      <div class="exposure-item reveal">
-        <div class="exp-dot"></div>
-        <div class="exp-text">Familiar with <strong>command-line tools and basic debugging workflows</strong> — GCC
-          flags, print-based debugging, file I/O tracing.</div>
-      </div>
-      <div class="exposure-item reveal">
-        <div class="exp-dot"></div>
-        <div class="exp-text">Explored <strong>Microsoft Azure</strong> fundamentals — provisioned Virtual Machines,
-          Azure SQL instances, and Resource Groups for cloud deployment scope.</div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-inner reveal">
-      <div class="section-label centered">// get in touch</div>
-      <h3>Let's build something together.</h3>
-      <p>Looking for an internship where I can contribute real work and grow fast. My inbox is open.</p>
-      <div class="contact-links">
-        <a class="contact-link cta" href="mailto:sriram.es.contact@gmail.com">✉ Email me</a>
-        <a class="contact-link" href="https://linkedin.com/in/es-sriram" target="_blank">LinkedIn</a>
-        <a class="contact-link" href="https://github.com/Sri-Ram-git" target="_blank">GitHub</a>
-        <a class="contact-link" href="resume.pdf" target="_blank" download="ES-Sriram_Resume.pdf">
-  Resume PDF
-</a>
+  <!-- PROJECTS SECTION (Stripe-Style Feature Cards) -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-index">03 // SELECTED WORK</span>
+        <h2 class="section-main-title">Engineered Projects</h2>
+      </div>
+      
+      <div class="premium-projects-list">
+
+        <!-- Project 1: Scalable Student Info System -->
+        <div class="premium-project-row glass-card">
+          <div class="p-row-info">
+            <span class="p-meta-num">01 / PRODUCTION</span>
+            <h3 class="p-row-title">Scalable Student Information System</h3>
+            <p class="p-row-desc">A high-throughput database system featuring persistent structured query performance. Designed with a menu-driven management console handling relational tables effortlessly via an embedded SQL engine engine layered under POSIX systems guidelines.</p>
+            <div class="p-row-tags">
+              <span class="p-tag-item">C Programming</span>
+              <span class="p-tag-item">SQLite</span>
+              <span class="p-tag-item">Linux WSL</span>
+              <span class="p-tag-item">GCC</span>
+            </div>
+            <div class="p-row-actions">
+              <a href="https://github.com/Sri-Ram-git/Scalable-Student-Information-System-C-SQL-" target="_blank" class="p-action-link">
+                Source Repository 
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4.5M13 1V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-row-visual visual-gradient-one">
+            <div class="floating-panel glass-card">
+              <div class="mock-terminal-line">> System initialized. Connecting SQLite...</div>
+              <div class="mock-terminal-line success">> Connection stable. Indexing collections.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Parking Management -->
+        <div class="premium-project-row glass-card">
+          <div class="p-row-info">
+            <span class="p-meta-num">02 / CORE SOFTWARE</span>
+            <h3 class="p-row-title">Modular Parking Automation Platform</h3>
+            <p class="p-row-desc">Engineered around efficient structural allocations in memory. This production system models structured array records for tracking vector allocations inside custom execution blocks utilizing advanced C structures.</p>
+            <div class="p-row-tags">
+              <span class="p-tag-item">C Structures</span>
+              <span class="p-tag-item">Memory Optimization</span>
+              <span class="p-tag-item">Modular Design</span>
+            </div>
+            <div class="p-row-actions">
+              <a href="https://github.com/Sri-Ram-git/parking-management-system-c" target="_blank" class="p-action-link">
+                Source Repository
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H4.5M13 1V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-row-visual visual-gradient-two">
+            <div class="floating-panel glass-card">
+              <div class="mock-terminal-line">> Struct allocated: size_t allocation</div>
+              <div class="mock-terminal-line">> Processing memory flags: [OK]</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <span>© 2025 ES Sriram</span>
-    <span class="footer-mid">B.Tech CSE Cloud Computing · Alliance University · Bangalore</span>
-    <span class="footer-accent">CSE — Cloud Computing</span>
+  <!-- EXPOSURE / LEADERSHIP SECTION -->
+  <section id="exposure" class="section-padding bento-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-index">04 // LEADERSHIP & INTEL</span>
+        <h2 class="section-main-title">Technical Engagements</h2>
+      </div>
+      
+      <div class="timeline-container">
+        
+        <div class="timeline-card glass-card">
+          <div class="time-header">
+            <span class="time-duration">FEB 2026</span>
+            <h4 class="time-title">Co-Lead, CloudOps — Alliance One: Shastra</h4>
+          </div>
+          <p class="time-desc">Managed systems availability, live operations coordination, and architectural integrity of core web properties serving crowds during the university's premier multi-day tech ecosystem activation.</p>
+        </div>
+
+        <div class="timeline-card glass-card">
+          <div class="time-header">
+            <span class="time-duration">MARCH 2026</span>
+            <h4 class="time-title">AI & Emerging Tech Ecosystem Series</h4>
+          </div>
+          <p class="time-desc">Participated in focused modern deep dives evaluating large-scale deployment tracks, model management, and full-stack software containerization solutions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / PREMIUM MINIMALIST CTA -->
+  <section id="contact" class="section-padding contact-glow-section">
+    <div class="container container-center">
+      <div class="contact-card-box glass-card">
+        <span class="contact-tag">// SYSTEM SYNC</span>
+        <h2>Initiate a Professional Request</h2>
+        <p>I am looking for challenging engineering environments where clean infrastructure and robust backend services are highly valued.</p>
+        
+        <div class="contact-grid-buttons">
+          <a href="mailto:sriram.es.contact@gmail.com" class="btn-premium-primary">
+            Secure Mail Transmission
+          </a>
+          <div class="social-links-row">
+            <a href="https://linkedin.com/in/es-sriram" target="_blank" class="social-icon-link">LinkedIn</a>
+            <a href="https://github.com/Sri-Ram-git" target="_blank" class="social-icon-link">GitHub</a>
+            <a href="resume.pdf" download="ES-Sriram_Resume.pdf" class="social-icon-link">Resume Asset</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Linear Minimalist Design) -->
+  <footer class="premium-footer">
+    <div class="container footer-split">
+      <div class="footer-left">
+        <span>© 2026 ES Sriram. All system logs cleared.</span>
+      </div>
+      <div class="footer-right">
+        <span>B.Tech CSE Cloud Computing · Alliance University · Bangalore</span>
+      </div>
+    </div>
   </footer>
 
+  <!-- Core Premium Micro-Interaction Engine Script -->
   <script src="assets/js/main.js"></script>
 </body>
 
