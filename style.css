@@ -1,0 +1,565 @@
+/* ==========================================================================
+   1. PREMIUM DESIGN SYSTEM VARIABLES (Obsidian & Glow)
+   ========================================================================== */
+:root {
+  --bg-obsidian: #030303;
+  --bg-card: rgba(10, 10, 10, 0.7);
+  --border-premium: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  
+  --text-primary: #f5f5f7;
+  --text-secondary: #86868b;
+  --text-muted: #48484a;
+  
+  /* High-end Neon Accents */
+  --accent-cyan: #00f2fe;
+  --accent-purple: #7f00ff;
+  --glow-primary: rgba(0, 242, 254, 0.15);
+  
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   2. CORE RESETS & GLOBAL STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 8rem 0;
+  position: relative;
+}
+
+/* Glassmorphism Base Utility */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-premium);
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   3. INTERACTIVE LIGHTING EFFECTS
+   ========================================================================== */
+.ambient-glow {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(127,0,255,0.08) 0%, rgba(0,242,254,0.03) 50%, transparent 100%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+/* ==========================================================================
+   4. FIXED GLASS NAVIGATION
+   ========================================================================== */
+.glass-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(3, 3, 3, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-premium);
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-size: 1.1rem;
+}
+
+.logo-bracket { color: var(--text-muted); }
+.logo-dot { color: var(--accent-cyan); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+.nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  margin-right: 4px;
+}
+
+.btn-nav {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.btn-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.hamburger-menu { display: none; background: none; border: none; cursor: pointer; }
+
+/* ==========================================================================
+   5. PREMIUM HERO ARCHITECTURE
+   ========================================================================== */
+.interactive-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+  mask-image: radial-gradient(circle at 50% 40%, black, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 70%);
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-badge-wrapper {
+  margin-bottom: 2rem;
+}
+
+.hero-status-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-premium);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--accent-cyan);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 3rem auto;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.btn-premium-primary {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-premium-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+}
+
+.btn-premium-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-premium);
+  color: var(--text-primary);
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-premium-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-hover);
+}
+
+/* Linear-style Horizon Metrics Grid */
+.hero-metrics-panel {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.metric-block { padding: 0 1.5rem; }
+.metric-val { font-family: var(--font-mono); font-size: 1.2rem; font-weight: 500; margin-bottom: 4px; }
+.metric-lbl { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+.metric-divider { width: 1px; height: 30px; background: var(--border-premium); }
+
+/* Scroll track anim */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.4;
+}
+
+.scroll-text { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 2px; }
+.scroll-track { width: 1px; height: 40px; background: rgba(255,255,255,0.1); position: relative; overflow: hidden; }
+.scroll-thumb { width: 100%; height: 15px; background: var(--accent-cyan); position: absolute; top: 0; animation: scrollAnim 2s infinite linear; }
+
+@keyframes scrollAnim {
+  0% { top: -15px; }
+  100% { top: 40px; }
+}
+
+/* ==========================================================================
+   6. HEADERS STYLE DEFINITION
+   ========================================================================== */
+.section-header { margin-bottom: 4rem; }
+.section-index { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); letter-spacing: 1px; display: block; margin-bottom: 0.5rem; }
+.section-main-title { font-size: 2.5rem; font-weight: 700; letter-spacing: -1px; }
+
+/* ==========================================================================
+   7. IDENTITY / ABOUT SPLIT LAYOUT
+   ========================================================================== */
+.about-split-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-narrative {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-narrative p { margin-bottom: 1.5rem; }
+.about-narrative strong { color: var(--text-primary); font-weight: 600; }
+.lead-text { font-size: 1.3rem; color: var(--text-primary); line-height: 1.6; }
+
+/* Premium Dark Code Console Box */
+.profile-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid var(--border-premium);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terminal-header .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.terminal-header .dot.red { background: #ff5f56; }
+.terminal-header .dot.yellow { background: #ffbd2e; }
+.terminal-header .dot.green { background: #27c93f; }
+.terminal-title { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); margin-left: auto; }
+
+.terminal-body {
+  padding: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.p-indent { padding-left: 2rem; }
+.token-keyword { color: #ff79c6; }
+.token-key { color: #f1fa8c; }
+.token-string { color: var(--accent-cyan); }
+
+/* ==========================================================================
+   8. BENTO GRID ARCHITECTURE
+   ========================================================================== */
+.bento-bg { background: radial-gradient(stroke at top, var(--bg-card), transparent); }
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-item {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 240px;
+}
+
+.bento-inner h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
+.bento-inner p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5; }
+
+.large-span { grid-column: span 2; justify-content: space-between; }
+.medium-span { grid-column: span 1; justify-content: space-between; }
+.small-span { grid-column: span 1; }
+
+.tech-icon-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; }
+.tech-badge-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-premium);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.icon-cube { font-size: 2rem; margin-bottom: 2rem; }
+.mono-code { font-family: var(--font-mono); color: var(--accent-cyan); font-size: 1.1rem; margin-bottom: 2rem; }
+
+/* ==========================================================================
+   9. PREMIUM PROJECTS LIST (Stripe-Style Feature Rows)
+   ========================================================================== */
+.premium-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.premium-project-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  overflow: hidden;
+}
+
+.p-row-info { padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+.p-meta-num { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 0.5rem; }
+.p-row-title { font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.5px; }
+.p-row-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
+.p-row-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; }
+.p-tag-item { font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.03); border: 1px solid var(--border-premium); padding: 0.3rem 0.6rem; border-radius: 4px; }
+
+.p-action-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.p-action-link:hover { color: var(--accent-cyan); }
+
+/* Background Canvas Blocks for Image Placement Alternatives */
+.p-row-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-size: cover;
+}
+
+.visual-gradient-one { background: linear-gradient(135deg, #0d0221 0%, #0f172a 100%); }
+.visual-gradient-two { background: linear-gradient(135deg, #001219 0%, #023047 100%); }
+
+.floating-panel {
+  width: 100%;
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.mock-terminal-line { margin-bottom: 6px; color: var(--text-secondary); }
+.mock-terminal-line.success { color: #27c93f; }
+
+/* ==========================================================================
+   10. CHRONOLOGICAL TIMELINE CHIPS
+   ========================================================================== */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-card {
+  padding: 2.5rem;
+}
+
+.time-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-premium);
+  padding-bottom: 1rem;
+}
+
+.time-duration { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); }
+.time-title { font-size: 1.3rem; font-weight: 600; }
+.time-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+
+/* ==========================================================================
+   11. MINIMALIST CONTACT MODULE
+   ========================================================================== */
+.container-center { display: flex; justify-content: center; }
+.contact-card-box {
+  padding: 5rem;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); }
+.contact-card-box h2 { font-size: 2.5rem; font-weight: 700; margin: 1rem 0; letter-spacing: -1px; }
+.contact-card-box p { color: var(--text-secondary); max-width: 500px; margin: 0 auto 3rem auto; line-height: 1.6; }
+
+.contact-grid-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-links-row { display: flex; gap: 2rem; }
+.social-icon-link { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition-smooth); }
+.social-icon-link:hover { color: var(--text-primary); }
+
+/* ==========================================================================
+   12. SYSTEMS PREMIUM FOOTER
+   ========================================================================== */
+.premium-footer {
+  border-top: 1px solid var(--border-premium);
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-split { display: flex; justify-content: space-between; align-items: center; }
+
+/* ==========================================================================
+   13. RESPONSIVE DESIGN (Adaptive Scaling)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 3.2rem; }
+  .about-split-grid, .premium-project-row { grid-template-columns: 1fr; gap: 3rem; }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .large-span { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; } /* Add menu toggle scripts logic here if required */
+  .hero-title { font-size: 2.5rem; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .large-span, .medium-span { grid-column: span 1; }
+  .hero-metrics-panel { grid-template-columns: 1fr; gap: 1rem; }
+  .metric-divider { display: none; }
+  .contact-card-box { padding: 3rem 1.5rem; }
+  .footer-split { flex-direction: column; gap: 1rem; text-align: center; }
+}
